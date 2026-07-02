@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Manrope, Space_Grotesk } from "next/font/google";
+import { I18nProvider } from "@/lib/i18n/i18n-provider";
+import { ThemeProvider } from "@/lib/theme/theme-provider";
+import { ThemeScript } from "@/lib/theme/theme-script";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -20,22 +23,44 @@ const jetBrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const siteDescription =
+  "Comunicação abre portas. Tecnologia constrói caminhos. Tecnologia com visão de negócio, comunicação e execução.";
+const siteTitle = "John Kevin Alves Rodrigues - Técnico em Informática";
+
 export const metadata: Metadata = {
-  title: "John Kevin Alves Rodrigues | Site JK",
-  description:
-    "Portfolio profissional de John Kevin Alves Rodrigues em construcao.",
-  metadataBase: new URL("https://TODO"),
+  metadataBase: new URL("https://johnkevin.vercel.app"),
+  title: siteTitle,
+  description: siteDescription,
+  applicationName: "Site JK",
+  authors: [{ name: "John Kevin Alves Rodrigues" }],
+  creator: "John Kevin Alves Rodrigues",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
-    title: "John Kevin Alves Rodrigues | Site JK",
-    description:
-      "Portfolio profissional de tecnologia, produto, negocio, comunicacao e execucao.",
-    images: ["/banner.png"],
+    title: siteTitle,
+    description: siteDescription,
+    images: [
+      {
+        url: "/banner.png",
+        width: 1600,
+        height: 900,
+        alt: "Banner do portfólio profissional Site JK de John Kevin Alves Rodrigues",
+      },
+    ],
+    locale: "pt_BR",
+    siteName: "Site JK",
+    type: "website",
+    url: "/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "John Kevin Alves Rodrigues | Site JK",
-    description:
-      "Portfolio profissional de tecnologia, produto, negocio, comunicacao e execucao.",
+    title: siteTitle,
+    description: "Comunicação abre portas. Tecnologia constrói caminhos.",
     images: ["/banner.png"],
   },
 };
@@ -49,9 +74,17 @@ export default function RootLayout({
     <html
       lang="pt-BR"
       data-theme="dark"
-      className={`${manrope.variable} ${spaceGrotesk.variable} ${jetBrainsMono.variable} h-full antialiased`}
+      className={`${manrope.variable} ${spaceGrotesk.variable} ${jetBrainsMono.variable} dark h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full">{children}</body>
+      <head>
+        <ThemeScript />
+      </head>
+      <body className="min-h-full">
+        <ThemeProvider>
+          <I18nProvider>{children}</I18nProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

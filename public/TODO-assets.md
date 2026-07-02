@@ -1,7 +1,11 @@
-# Assets pendentes
+# Assets oficiais
 
-- TODO: `photo.png`
-- TODO: `banner.png`
-- TODO: `cv-john-kevin.pdf`
+- `photo.png`: foto oficial adicionada.
+- `banner.png`: banner Open Graph desktop adicionado.
+- `banner.desktop.png`: versão desktop preservada.
+- `banner.mobile.png`: versão mobile preservada para uso futuro.
+- `cv-john-kevin.pdf`: currículo oficial adicionado.
 
-Nao criar substitutos falsos. Usar apenas os arquivos oficiais quando forem fornecidos.
+Decisão atual:
+
+- Sem screenshots de projetos nesta etapa.
