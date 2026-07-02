@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import type { Transition } from "framer-motion";
+import { ConstellationCanvas } from "@/components/effects/constellation-canvas";
 import { Card } from "@/components/ui/card";
 import { SectionHeading } from "@/components/ui/section-heading";
 import {
@@ -41,10 +42,20 @@ export function Timeline() {
 
   return (
     <section
-      className="scroll-mt-24 overflow-hidden border-b border-border"
+      className="relative scroll-mt-24 overflow-hidden border-b border-border"
       id="journey"
     >
-      <div className="mx-auto w-full max-w-7xl px-5 py-14 sm:px-8 sm:py-16 lg:py-20">
+      <div
+        aria-hidden="true"
+        className="journey-grid pointer-events-none absolute inset-0 opacity-60"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-[6%] top-[28%] hidden h-[540px] w-[540px] rounded-full bg-[radial-gradient(circle,var(--ambient-b),transparent_65%)] blur-2xl lg:block"
+      />
+      <ConstellationCanvas className="opacity-45" />
+
+      <div className="relative mx-auto w-full max-w-7xl px-5 py-14 sm:px-8 sm:py-16 lg:py-20">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.76fr)_minmax(420px,1.24fr)] lg:items-start">
           <motion.div
             initial="hidden"
@@ -68,7 +79,7 @@ export function Timeline() {
             <motion.div
               aria-label={t("timeline_filter_label")}
               className="mt-6 flex flex-wrap gap-2"
-              role="tablist"
+              role="group"
               transition={transition}
               variants={itemReveal}
             >
@@ -79,7 +90,7 @@ export function Timeline() {
 
                 return (
                   <button
-                    aria-selected={active}
+                    aria-pressed={active}
                     className={cn(
                       "rounded-pill border px-4 py-2 font-mono text-xs uppercase tracking-[0.18em] transition duration-300 ease-[var(--ease-premium)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
                       active
@@ -88,7 +99,6 @@ export function Timeline() {
                     )}
                     key={filter}
                     onClick={() => setActiveFilter(filter)}
-                    role="tab"
                     type="button"
                   >
                     {label}

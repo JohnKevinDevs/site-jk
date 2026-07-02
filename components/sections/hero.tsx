@@ -18,7 +18,7 @@ export function Hero() {
 
   return (
     <section
-      className="relative isolate min-h-[calc(100svh-4rem)] overflow-hidden border-b border-border"
+      className="relative isolate min-h-[calc(100svh-4rem)] scroll-mt-16 overflow-hidden border-b border-border"
       id="hero"
     >
       <ConstellationCanvas />
@@ -39,7 +39,7 @@ export function Hero() {
 
       <motion.div
         animate="show"
-        className="relative z-10 mx-auto flex min-h-[calc(100svh-4rem)] w-full max-w-7xl flex-col justify-center px-5 py-16 sm:px-8 sm:py-20 lg:py-24"
+        className="relative z-10 mx-auto flex min-h-[calc(100svh-4rem)] w-full max-w-7xl flex-col justify-center px-5 py-8 sm:px-8 sm:py-10 lg:py-12"
         initial="hidden"
         transition={
           reduceMotion
@@ -48,7 +48,7 @@ export function Hero() {
         }
       >
         <motion.p
-          className="mb-7 inline-flex w-fit max-w-full items-center gap-2.5 rounded-pill border border-blue-border bg-chip-bg px-4 py-2 font-mono text-[11px] uppercase tracking-[0.16em] text-accent-soft shadow-soft sm:text-xs sm:tracking-[0.18em]"
+          className="mb-5 inline-flex w-fit max-w-full items-center gap-2.5 rounded-pill border border-blue-border bg-chip-bg px-4 py-2 font-mono text-[11px] uppercase tracking-[0.16em] text-accent-soft shadow-soft sm:mb-6 sm:text-xs sm:tracking-[0.18em]"
           transition={{ duration: reduceMotion ? 0 : 0.45 }}
           variants={motionItem}
         >
@@ -60,7 +60,7 @@ export function Hero() {
         </motion.p>
 
         <motion.div className="max-w-5xl" variants={motionItem}>
-          <h1 className="break-words font-display text-[clamp(40px,10vw,60px)] font-bold leading-[0.98] tracking-[-0.03em] text-head sm:text-[clamp(46px,7vw,86px)]">
+          <h1 className="break-words font-display text-[clamp(34px,9vw,60px)] font-bold leading-[0.98] tracking-[-0.03em] text-head sm:text-[clamp(42px,5.2vw,72px)]">
             <span>{t("hero_title_line1")}</span>
             <br />
             <span className="grad-word">{t("hero_title_line2")}</span>
@@ -68,7 +68,7 @@ export function Hero() {
         </motion.div>
 
         <motion.p
-          className="mt-7 max-w-[640px] text-[17px] leading-8 text-soft sm:text-lg lg:text-[21px]"
+          className="mt-5 max-w-[640px] text-base leading-7 text-soft sm:mt-6 sm:text-lg sm:leading-8 lg:text-[21px]"
           transition={{ duration: reduceMotion ? 0 : 0.45 }}
           variants={motionItem}
         >
@@ -78,15 +78,12 @@ export function Hero() {
         </motion.p>
 
         <motion.div
-          className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap"
+          className="mt-7 flex flex-wrap gap-3 sm:mt-8"
           transition={{ duration: reduceMotion ? 0 : 0.45 }}
           variants={motionItem}
         >
-          <Button className="w-full sm:w-auto" href="#projects">
-            {t("hero_btn1")}
-          </Button>
+          <Button href="#projects">{t("hero_btn1")}</Button>
           <Button
-            className="w-full sm:w-auto"
             href={contact.github}
             rel="noopener noreferrer"
             target="_blank"
@@ -94,7 +91,7 @@ export function Hero() {
           >
             {t("hero_github")}
           </Button>
-          <Button className="w-full sm:w-auto" href="#contact" variant="ghost">
+          <Button href="#contact" variant="ghost">
             {t("hero_btn3")}
           </Button>
         </motion.div>

@@ -48,9 +48,11 @@ export function TechTile({ item }: TechTileProps) {
           <img
             alt=""
             className="h-[26px] w-[26px] object-contain"
+            height={26}
             loading="lazy"
             onError={() => setIconFailed(true)}
             src={item.icon}
+            width={26}
           />
         ) : (
           <span

@@ -21,7 +21,7 @@ export function SectionHeading({
         </p>
       </div>
 
-      <h2 className="mt-6 break-words font-display text-[clamp(30px,4vw,48px)] font-semibold leading-[1.08] text-head">
+      <h2 className="mt-6 break-words text-pretty font-display text-[clamp(30px,4vw,48px)] font-semibold leading-[1.08] text-head">
         {title}
       </h2>
     </div>

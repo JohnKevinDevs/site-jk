@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { LanguageToggle } from "@/components/ui/language-toggle";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { navigationItems } from "@/lib/data/navigation";
@@ -11,13 +11,31 @@ import { cn } from "@/lib/utils/cn";
 export function Navbar() {
   const { locale, t } = useI18n();
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      setIsScrolled(window.scrollY > 8);
+    }
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const menuLabel = isOpen ? t("nav_menu_close") : t("nav_menu_open");
   const navLabel = locale === "en" ? "Primary" : "Principal";
   const skipLabel = locale === "en" ? "Skip to content" : "Pular para o conteúdo";
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-nav backdrop-blur-xl">
+    <header
+      className={cn(
+        "sticky top-0 z-50 border-b bg-nav backdrop-blur-xl transition-[border-color,box-shadow] duration-300 ease-[var(--ease-premium)]",
+        isScrolled || isOpen
+          ? "border-border shadow-soft"
+          : "border-transparent",
+      )}
+    >
       <a
         className="sr-only left-4 top-4 z-[60] rounded-pill border border-blue-border bg-surface px-4 py-3 text-sm font-semibold text-strong shadow-blue focus:not-sr-only focus:fixed focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         href="#main-content"
@@ -114,7 +132,7 @@ export function Navbar() {
             : "grid-rows-[0fr] py-0 opacity-0",
         )}
       >
-        <div className="max-h-[calc(100svh-4rem)] overflow-hidden overflow-y-auto">
+        <div className="max-h-[calc(100svh-4rem)] overflow-hidden overflow-y-auto overscroll-contain">
           <div className="flex flex-col gap-2">
             {navigationItems.map((item) => (
               <a

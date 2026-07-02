@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { useTheme } from "@/lib/theme/use-theme";
+import { cn } from "@/lib/utils/cn";
 
 type Point = {
   x: number;
@@ -17,7 +18,11 @@ function prefersReducedMotion() {
   );
 }
 
-export function ConstellationCanvas() {
+type ConstellationCanvasProps = {
+  className?: string;
+};
+
+export function ConstellationCanvas({ className }: ConstellationCanvasProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const hostRef = useRef<HTMLDivElement>(null);
   const { theme } = useTheme();
@@ -161,7 +166,10 @@ export function ConstellationCanvas() {
 
   return (
     <div aria-hidden="true" className="pointer-events-none absolute inset-0" ref={hostRef}>
-      <canvas className="h-full w-full opacity-75" ref={canvasRef} />
+      <canvas
+        className={cn("h-full w-full", className ?? "opacity-75")}
+        ref={canvasRef}
+      />
     </div>
   );
 }

@@ -117,7 +117,7 @@ export const dictionaries = {
     timeline_filter_label: "Filtrar trajetória por ano",
     timeline_filter_all: "Todos",
     timeline_next_kicker: "Próximo capítulo",
-    timeline_next_title: "O próximo capítulo...",
+    timeline_next_title: "O próximo capítulo…",
     timeline_next_body:
       "Continuidade em construção, com foco em transformar aprendizado em entrega real.",
     cert_label: "Aprendizado & experiência",
@@ -253,7 +253,7 @@ export const dictionaries = {
     timeline_filter_label: "Filter journey by year",
     timeline_filter_all: "All",
     timeline_next_kicker: "Next chapter",
-    timeline_next_title: "The next chapter...",
+    timeline_next_title: "The next chapter…",
     timeline_next_body:
       "Continuity in progress, focused on turning learning into real delivery.",
     cert_label: "Learning & experience",

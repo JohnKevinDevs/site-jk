@@ -7,7 +7,7 @@ import {
   useSyncExternalStore,
   type ReactNode,
 } from "react";
-import { THEME_STORAGE_KEY, type Theme } from "./constants";
+import { THEME_COLORS, THEME_STORAGE_KEY, type Theme } from "./constants";
 
 type ThemeContextValue = {
   theme: Theme;
@@ -55,6 +55,14 @@ function applyTheme(theme: Theme) {
   root.dataset.theme = theme;
   root.classList.toggle("dark", theme === "dark");
   root.classList.toggle("light", theme === "light");
+
+  let meta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.name = "theme-color";
+    document.head.appendChild(meta);
+  }
+  meta.content = THEME_COLORS[theme];
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {

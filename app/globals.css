@@ -152,6 +152,8 @@ body {
   width: 100%;
   min-height: 100vh;
   margin: 0;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
   overflow-x: clip;
   background:
     radial-gradient(circle at 82% 10%, var(--ambient-a), transparent 30rem),
@@ -160,6 +162,13 @@ body {
   color: var(--text);
   font-family: var(--font-sans);
   text-rendering: geometricPrecision;
+}
+
+a,
+button,
+[role="button"] {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 img,
@@ -255,6 +264,19 @@ button:disabled {
 
 .pulse-dot {
   animation: pulse-dot 2.4s ease-in-out infinite;
+}
+
+.journey-grid {
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 54px 54px;
+  -webkit-mask-image: radial-gradient(
+    820px 620px at 18% 62%,
+    #000,
+    transparent 74%
+  );
+  mask-image: radial-gradient(820px 620px at 18% 62%, #000, transparent 74%);
 }
 
 @keyframes aurora {
