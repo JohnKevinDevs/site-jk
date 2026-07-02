@@ -23,9 +23,9 @@ const jetBrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const siteTitle = "Site JK";
 const siteDescription =
   "Comunicação abre portas. Tecnologia constrói caminhos. Tecnologia com visão de negócio, comunicação e execução.";
-const siteTitle = "John Kevin Alves Rodrigues - Técnico em Informática";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://johnkevin.vercel.app"),

@@ -11,6 +11,10 @@ export const navigationItems: NavItem[] = [
     labelKey: "nav_about",
   },
   {
+    href: "#work-method",
+    labelKey: "nav_work",
+  },
+  {
     href: "#projects",
     labelKey: "nav_projects",
   },

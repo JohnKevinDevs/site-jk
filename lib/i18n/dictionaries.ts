@@ -12,6 +12,7 @@ export const dictionaries = {
     languageName: "Português",
     languageToggleLabel: "Alternar idioma para inglês",
     nav_about: "Sobre",
+    nav_work: "Como eu trabalho",
     nav_projects: "Projetos",
     nav_stack: "Stack",
     nav_path: "Trajetória",
@@ -82,6 +83,27 @@ export const dictionaries = {
     snap3: "em Informática · CEAP",
     snap4_t: "Full Stack",
     snap4: "base web completa",
+    work_label: "Como eu trabalho",
+    work_h2: "Como eu trabalho",
+    work_sub:
+      "Comunicação, organização e execução para transformar ideias em soluções reais.",
+    work_intro:
+      "Meu jeito de trabalhar une comunicação, organização e execução. Antes de abrir o código, eu busco entender o problema, alinhar expectativas e transformar ideias em soluções práticas, simples de explicar e possíveis de evoluir.",
+    work_chip_product: "Produto",
+    work_chip_communication: "Comunicação",
+    work_chip_execution: "Execução",
+    work_card1_t: "Entender antes de construir",
+    work_card1_b:
+      "Antes de pensar em tecnologia, procuro entender o problema, o contexto, as pessoas envolvidas e o impacto esperado.",
+    work_card2_t: "Transformar ideias em direção",
+    work_card2_b:
+      "Organizo informações, defino prioridades e ajudo a transformar ideias soltas em um caminho claro de execução.",
+    work_card3_t: "Construir com clareza",
+    work_card3_b:
+      "Gosto de trabalhar com entregas práticas, comunicação objetiva e soluções que façam sentido para quem realmente vai usar.",
+    work_card4_t: "Melhorar com feedback",
+    work_card4_b:
+      "Vejo cada projeto como um ciclo: construir, testar, ouvir, ajustar e evoluir.",
     proj_label: "Projetos",
     proj_h2: "Construído, não só estudado.",
     proj_sub:
@@ -149,6 +171,7 @@ export const dictionaries = {
     languageName: "English",
     languageToggleLabel: "Switch language to Portuguese",
     nav_about: "About",
+    nav_work: "How I work",
     nav_projects: "Projects",
     nav_stack: "Stack",
     nav_path: "Journey",
@@ -218,6 +241,27 @@ export const dictionaries = {
     snap3: "in Computing · CEAP",
     snap4_t: "Full Stack",
     snap4: "complete web base",
+    work_label: "How I work",
+    work_h2: "How I work",
+    work_sub:
+      "Communication, organization and execution to turn ideas into real solutions.",
+    work_intro:
+      "My way of working combines communication, organization and execution. Before writing code, I try to understand the problem, align expectations and turn ideas into practical solutions that are easy to explain and possible to evolve.",
+    work_chip_product: "Product",
+    work_chip_communication: "Communication",
+    work_chip_execution: "Execution",
+    work_card1_t: "Understand before building",
+    work_card1_b:
+      "Before thinking about technology, I try to understand the problem, the context, the people involved and the expected impact.",
+    work_card2_t: "Turn ideas into direction",
+    work_card2_b:
+      "I organize information, define priorities and help turn loose ideas into a clear execution path.",
+    work_card3_t: "Build with clarity",
+    work_card3_b:
+      "I like working with practical deliveries, objective communication and solutions that make sense for the people who will actually use them.",
+    work_card4_t: "Improve through feedback",
+    work_card4_b:
+      "I see every project as a cycle: build, test, listen, adjust and evolve.",
     proj_label: "Projects",
     proj_h2: "Built, not just studied.",
     proj_sub:

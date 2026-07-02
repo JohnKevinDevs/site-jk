@@ -67,7 +67,7 @@ export function Navbar() {
         <div className="hidden items-center gap-1 lg:flex">
           {navigationItems.map((item) => (
             <a
-              className="rounded-pill px-4 py-2 text-sm font-medium text-soft transition duration-300 ease-[var(--ease-premium)] hover:bg-chip-bg hover:text-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="rounded-pill px-3 py-2 text-sm font-medium text-soft transition duration-300 ease-[var(--ease-premium)] hover:bg-chip-bg hover:text-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent xl:px-4"
               href={item.href}
               key={item.href}
             >

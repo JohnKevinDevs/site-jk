@@ -7,6 +7,7 @@ import { Projects } from "@/components/sections/projects";
 import { Stack } from "@/components/sections/stack";
 import { TechMarquee } from "@/components/sections/tech-marquee";
 import { Timeline } from "@/components/sections/timeline";
+import { WorkMethod } from "@/components/sections/work-method";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       >
         <Hero />
         <About />
+        <WorkMethod />
         <Timeline />
         <Projects />
         <Stack />
