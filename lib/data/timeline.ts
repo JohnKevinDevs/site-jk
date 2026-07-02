@@ -39,10 +39,7 @@ export const timeline: TimelineItem[] = [
     ],
     cards: [
       {
-        title: {
-          pt: "Fundamentos técnicos",
-          en: "Technical fundamentals",
-        },
+        title: { pt: "Fundamentos técnicos", en: "Technical fundamentals" },
         body: {
           pt: "Base em lógica de programação, desenvolvimento web, banco de dados e primeiros sistemas.",
           en: "Foundation in programming logic, web development, databases and first systems.",
@@ -54,10 +51,7 @@ export const timeline: TimelineItem[] = [
         ],
       },
       {
-        title: {
-          pt: "Primeiros projetos práticos",
-          en: "First practical projects",
-        },
+        title: { pt: "Primeiros projetos práticos", en: "First practical projects" },
         body: {
           pt: "Aplicação dos estudos em projetos menores, começando a transformar aprendizado em entrega.",
           en: "Application of studies in smaller projects, beginning to turn learning into delivery.",
@@ -69,10 +63,7 @@ export const timeline: TimelineItem[] = [
         ],
       },
       {
-        title: {
-          pt: "Base CEAP",
-          en: "CEAP foundation",
-        },
+        title: { pt: "Base CEAP", en: "CEAP foundation" },
         body: {
           pt: "Consolidação no Técnico em Informática, conectando estudo, responsabilidade e prática em tecnologia.",
           en: "Consolidation in the Computing Technician program, connecting study, responsibility and practical technology.",
@@ -84,10 +75,7 @@ export const timeline: TimelineItem[] = [
         ],
       },
       {
-        title: {
-          pt: "Mentalidade de construção",
-          en: "Builder mindset",
-        },
+        title: { pt: "Mentalidade de construção", en: "Builder mindset" },
         body: {
           pt: "Percepção de que tecnologia exige clareza, organização, comunicação e responsabilidade.",
           en: "Realization that technology requires clarity, organization, communication and responsibility.",
@@ -118,10 +106,7 @@ export const timeline: TimelineItem[] = [
     ],
     cards: [
       {
-        title: {
-          pt: "Projetos com mais maturidade",
-          en: "More mature projects",
-        },
+        title: { pt: "Projetos com mais maturidade", en: "More mature projects" },
         body: {
           pt: "Evolução em projetos técnicos, apresentações e construção de soluções mais completas.",
           en: "Evolution in technical projects, presentations and the building of more complete solutions.",
@@ -132,10 +117,7 @@ export const timeline: TimelineItem[] = [
         ],
       },
       {
-        title: {
-          pt: "Reconhecimento e exposição",
-          en: "Recognition and exposure",
-        },
+        title: { pt: "Reconhecimento e exposição", en: "Recognition and exposure" },
         body: {
           pt: "Participação em projetos e eventos que trouxeram validação, feedback e mais confiança.",
           en: "Participation in projects and events that brought validation, feedback and more confidence.",
@@ -162,10 +144,7 @@ export const timeline: TimelineItem[] = [
         ],
       },
       {
-        title: {
-          pt: "Mentalidade de portfólio",
-          en: "Portfolio mindset",
-        },
+        title: { pt: "Mentalidade de portfólio", en: "Portfolio mindset" },
         body: {
           pt: "Projetos passam a comunicar evolução, repertório técnico e capacidade de transformar estudo em produto.",
           en: "Projects begin to communicate growth, technical range and the ability to turn study into product.",
@@ -196,10 +175,7 @@ export const timeline: TimelineItem[] = [
     ],
     cards: [
       {
-        title: {
-          pt: "CEO da FluxON",
-          en: "CEO of FluxON",
-        },
+        title: { pt: "CEO da FluxON", en: "CEO of FluxON" },
         body: {
           pt: "Fundação e liderança da FluxON, startup de agendamento e controle de atendimentos para negócios de serviço.",
           en: "Founding and leading FluxON, a startup for scheduling and service control for service-based businesses.",
@@ -211,10 +187,7 @@ export const timeline: TimelineItem[] = [
         ],
       },
       {
-        title: {
-          pt: "MVPs e produtos digitais",
-          en: "MVPs and digital products",
-        },
+        title: { pt: "MVPs e produtos digitais", en: "MVPs and digital products" },
         body: {
           pt: "Construção e direção de projetos como SkillForge, Sistema JK, BID/Copa CEAP, LevelCorp e Site JK.",
           en: "Building and directing projects such as SkillForge, Sistema JK, BID/Copa CEAP, LevelCorp and Site JK.",
@@ -240,10 +213,7 @@ export const timeline: TimelineItem[] = [
         ],
       },
       {
-        title: {
-          pt: "Próximo capítulo",
-          en: "Next chapter",
-        },
+        title: { pt: "Próximo capítulo", en: "Next chapter" },
         body: {
           pt: "Continuidade da trajetória com foco em produto, tecnologia, execução e impacto real.",
           en: "Continuing the journey with focus on product, technology, execution and real impact.",
