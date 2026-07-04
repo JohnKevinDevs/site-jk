@@ -12,6 +12,9 @@ export function Navbar() {
   const { locale, t } = useI18n();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const desktopNavigationItems = navigationItems.filter(
+    (item) => item.labelKey !== "nav_work",
+  );
 
   useEffect(() => {
     function handleScroll() {
@@ -44,7 +47,7 @@ export function Navbar() {
       </a>
       <nav
         aria-label={navLabel}
-        className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between gap-2 px-5 sm:px-8"
+        className="mx-auto flex min-h-16 w-full max-w-7xl items-center justify-between gap-2 px-5 py-2 sm:px-8"
       >
         <a
           href="#hero"
@@ -58,14 +61,14 @@ export function Navbar() {
             <span className="block truncate font-display text-base font-semibold tracking-[-0.02em] text-strong">
               {profile.shortName}
             </span>
-            <span className="hidden truncate text-xs text-muted md:block">
-              {profile.positioning[locale]}
+            <span className="hidden max-w-[260px] text-[11px] leading-4 text-muted md:block xl:max-w-[340px]">
+              {profile.brandPhrase[locale]}
             </span>
           </span>
         </a>
 
         <div className="hidden items-center gap-1 lg:flex">
-          {navigationItems.map((item) => (
+          {desktopNavigationItems.map((item) => (
             <a
               className="rounded-pill px-3 py-2 text-sm font-medium text-soft transition duration-300 ease-[var(--ease-premium)] hover:bg-chip-bg hover:text-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent xl:px-4"
               href={item.href}
@@ -80,7 +83,7 @@ export function Navbar() {
           <LanguageToggle />
           <ThemeToggle />
           <a
-            className="rounded-pill border border-transparent bg-linear-to-br from-accent to-accent-deep px-5 py-2.5 text-sm font-semibold text-white shadow-blue transition duration-300 ease-premium hover:-translate-y-0.5 hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            className="shrink-0 whitespace-nowrap rounded-pill border border-transparent bg-linear-to-br from-accent to-accent-deep px-4 py-2.5 text-sm font-semibold text-white shadow-blue transition duration-300 ease-premium hover:-translate-y-0.5 hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent xl:px-5"
             href="#contact"
           >
             {t("nav_cta")}

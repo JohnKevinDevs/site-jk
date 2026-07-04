@@ -117,15 +117,15 @@ export const timeline: TimelineItem[] = [
         ],
       },
       {
-        title: { pt: "Reconhecimento e exposição", en: "Recognition and exposure" },
+        title: { pt: "RacerX na FeCEAP 2025", en: "RacerX at FeCEAP 2025" },
         body: {
-          pt: "Participação em projetos e eventos que trouxeram validação, feedback e mais confiança.",
-          en: "Participation in projects and events that brought validation, feedback and more confidence.",
+          pt: "Projeto campeão público da FeCEAP 2025, trazendo validação, exposição e mais confiança para seguir construindo.",
+          en: "Public vote winning project at FeCEAP 2025, bringing validation, exposure and more confidence to keep building.",
         },
         chips: [
+          { pt: "RacerX", en: "RacerX" },
           { pt: "FeCEAP", en: "FeCEAP" },
-          { pt: "Feedback", en: "Feedback" },
-          { pt: "Validação", en: "Validation" },
+          { pt: "Campeão público", en: "Public vote winner" },
         ],
       },
       {

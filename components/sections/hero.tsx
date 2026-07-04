@@ -91,7 +91,7 @@ export function Hero() {
           >
             {t("hero_github")}
           </Button>
-          <Button href="#contact" variant="ghost">
+          <Button href="#contact" variant="secondary">
             {t("hero_btn3")}
           </Button>
         </motion.div>
